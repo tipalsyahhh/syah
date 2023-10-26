@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="twitter:title" content="Vanta.js - 3D & WebGL Background Animations For Your Website">
+  <meta name="twitter:description" content="Gallery of customizable plug & play animated backgrounds using three.js">
+  <title>Tipal Syah</title>
+  <link rel="icon" href="PDIP.webp" type="image/x-icon">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="profile-icon">
+    <img src="tipal.jpg" alt="Profile Icon">
+  </div>
+  <div class="container">
+    <button class="btn" onclick="location.href='https://tipalsyahhh.github.io/history/'">
+      <img src="1.png" width="28" alt="Button img">
+      <span class="text">GALLERY</span>
+    </button>
+    <button class="btn" onclick="location.href='https://abangidoy.blogspot.com/'">
+      <img src="2.png" width="40" alt="Button img">
+      <span class="text">BLOGSPOT</span>
+    </button>
+    <button class="btn" onclick="location.href='https://github.com/tipalsyahhh'">
+      <img src="3.png" width="50" alt="Button img">
+      <span class="text">GITHUB</span>
+    </button>
+    <footer>
+      <a href="https://www.instagram.com/kansaamaida/">@cansa</a>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+  <script>
+    VANTA.BIRDS({
+      el: "body",
+      backgroundColor: 0x0,
+      color1: 0xffe100,
+      color2: 0xffffff,
+      speedLimit: 4,
+      birdSize: 1,
+      wingSpan: 20,
+      separation: 30,
+      quantity: 3.0,
+      backgroundAlpha: 0.0,
+    });
+
+    window.addEventListener('resize', () => {
+      VANTA.BIRDS.resize()
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var container = document.querySelector(".container");
+    container.classList.add("animate");
+});
+  </script>
+</body>
+
+</html>
