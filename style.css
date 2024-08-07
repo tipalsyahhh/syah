@@ -12,30 +12,23 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: calc(100vh * 1);
+  cursor: pointer;
+  user-select: none;
+  touch-action: none;
 }
 
 .name {
-  display: flex;
-  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #000;
-}
-
-.next {
-  border: none;
-  background-color: transparent;
-  margin-left: 5px;
-  font-size: 25px;
-  cursor: pointer;
-  color: #000;
+  color: #155d5f;
 }
 
 .name h3 {
   font-size: 25px;
   font-weight: bold;
+  font-style: italic;
 }
 
 @media (max-width: 768px) {
