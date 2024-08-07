@@ -10,7 +10,7 @@
       backgroundColor: 0xffffff,
       color1: 0x000,
       color2: 0x000,
-      birdSize: 1.30,
+      birdSize: 1.10,
       wingSpan: 18.00,
       speedLimit: 8.00,
       separation: 27.00,
