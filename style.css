@@ -2,73 +2,13 @@ body {
   overflow: hidden;
   margin: 0;
   font-family: "Gill Sans", sans-serif;
+  background-color: #f3f0f0;
 }
 
-.profile-icon {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -210%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-}
-
-.profile-icon img {
-  width: 95%;
-  height: 95%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  color: white;
-  font-family: Arial, sans-serif;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.isi {
-  width: 50%;
-  background: rgba(255, 255, 255, 0.09);
-  backdrop-filter: blur(4.3px);
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  border-radius: 20px;
-  font-weight: bold;
-  border: 1px solid #fff;
-}
-
-.isi a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a {
-  font-size: 16px;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .isi{
-    width: 60%;
-  }
+.img-background {
+  background-image: url('img/bg.png');
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
