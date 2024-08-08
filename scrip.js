@@ -18,3 +18,8 @@
       cohesion: 26.00,
       quantity: 3.00
     })
+
+    window.addEventListener('load', function() {
+      const nameDiv = document.querySelector('.name');
+      nameDiv.classList.add('reveal');
+  });
