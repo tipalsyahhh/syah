@@ -26,7 +26,6 @@ canvas {
   align-items: center;
   justify-content: center;
   text-align: center;
-  backdrop-filter: blur(2px);
   transition: background 0.5s ease;
   background-image: url('img/bg.png'); 
   background-size: cover;
@@ -55,14 +54,9 @@ body.day-mode .content {
   color: #333;
 }
 
-h1 {
-  font-size: 30px;
-  margin: 10px 0 10px 0;
-}
-
 h2 {
+  margin: 10px 0 0 0;
   font-size: 1.5em;
-  margin: 0;
   color: #ccc;
 }
 
@@ -139,6 +133,10 @@ body.day-mode .btns a:hover {
 
   .content .btns a {
     width: calc(100vw * 0.50);
+  }
+
+  .content h2 {
+    font-size: 20px;
   }
 
   .image {

@@ -158,8 +158,25 @@ function applyDayMode() {
   stopFireworks();
 }
 
+
 toggleBtn.addEventListener("click", () => {
-  isNightMode ? applyDayMode() : applyNightMode();
+  isNightMode = !isNightMode;
+
+  if (isNightMode) {
+    document.body.style.background = "black";
+    document.getElementById("sunAnimation").style.display = "none";
+    disableVanta();
+    toggleBtn.textContent = "Mode Siang ☀️";
+    startFireworks && startFireworks();
+  } else {
+    document.body.style.background = "white";
+    document.getElementById("sunAnimation").style.display = "block";
+    enableVanta();
+    toggleBtn.textContent = "Mode Malam 🌙";
+    stopFireworks && stopFireworks();
+  }
+
+  updateTextColor && updateTextColor();
 });
 
 applyNightMode();
