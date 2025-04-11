@@ -1,87 +1,148 @@
-body {
-  padding: 0;
+html, body {
   margin: 0;
-  font-family: "Gill Sans", sans-serif;
-  background-color: #f3f0f0;
+  padding: 0;
+  overflow: hidden;
   height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.5s ease;
 }
 
-.img-background {
-  background-image: url('img/bg.png');
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  display: none; 
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  backdrop-filter: blur(2px);
+  transition: background 0.5s ease;
+  background-image: url('img/bg.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: calc(100vh * 1);
-  user-select: none;
-  touch-action: none;
+  color: #333;
 }
 
-.name {
+body.night-mode {
+  background: black;
+  color: white;
+}
+
+body.night-mode .content {
+  background-image: none;
+  color: white;
+}
+
+body.day-mode {
+  background: white;
+  color: #333;
+}
+
+body.day-mode .content {
+  background-image: url('img/bg.png');
+  color: #333;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 10px 0 10px 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #ccc;
+}
+
+.a {
+  text-decoration: none;
+}
+
+.btns {
+  margin-top: 1.5em;
+  display: grid;
+  gap: 10px;
+}
+
+.content .btns a {
+  padding: 10px 20px;
+  border: 2px solid;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: calc(100vw * 0.15);
+  background: rgba(255, 255, 255, 0.26);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+}
+
+body.day-mode .btns a {
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  border: 1px solid black;
+}
+
+body.day-mode .btns a:hover {
+  background: black;
+  color: white;
+}
+
+.sun {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFD700 30%, #FFA500 70%);
+  animation: rotateSun 10s linear infinite;
+  display: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) translateY(20px);
-  opacity: 0;
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  top: calc(3vh + 10px);
+  left: 50px;
+  z-index: 1;
 }
 
-.name.reveal {
-  opacity: 1;
-  transform: translate(-50%, -50%) translateY(0);
+@keyframes rotateSun {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.image {
+  width: 200px;
+  height: 200px;
 }
 
 .img-profile {
-  width: 140px;
-  height: 140px;
   border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 1);
-  overflow: hidden;
-}
-
-.img-profile img {
-  width: 100%;
   height: 100%;
+  width: 100%;
+  border: 2px solid;
   object-fit: cover;
 }
 
-.link {
-  color: #012025;
-  width: 140px;
-  height: 30px;
-  margin-top: 10px;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4px);
-  border: 2px solid rgba(255, 255, 255, 1);
-}
+@media (max-width: 778px)  {
+  #sunAnimation {
+    width: 100px;
+    height: 100px;
+    left: 30px;
+  }
 
-.link p {
-  margin: 0;
-  font-size: 15px;
-  font-weight: bold;
-}
+  .content .btns a {
+    width: calc(100vw * 0.50);
+  }
 
-a {
-  text-decoration: none;
-  color: #012025;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .img-profile {
+  .image {
     width: 150px;
     height: 150px;
-  }
-
-  .link {
-    width: 150px;
-    height: 35px;
-  }
-
-  .link p {
-    font-size: 15px;
   }
 }

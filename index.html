@@ -4,36 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipal Syah</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="img/PDIP.webp" type="image/x-icon">
-  <script src="https://cdn.jsdelivr.net/npm/three@0.125.2/build/three.min.js"></script>
-  <script src="https://www.vantajs.com/dist/vanta.birds.min.js"></script>
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-  <title>Tipalsyah</title>
 </head>
 
 <body>
-  <div class="img-background">
-    <div class="name">
-      <div class="img-profile">
-        <img src="img/mek.jpg" alt="">
-      </div>
-      <center>
-        <button class="link" onclick="window.location.href='https://github.com/tipalsyahhh';">
-          <p>Github</p>
-        </button><br>
-        <button class="link" onclick="window.location.href='https://abangidoy.blogspot.com/';">
-          <p>Blogspot</p>
-        </button><br>
-        <button class="link" style="margin-bottom: 10px;"
-          onclick="window.location.href='https://tipalsyahhh.github.io/tampilan-in-ikan/';">
-          <p>Login</p>
-        </button><br>
-        <a href="https://www.instagram.com/tipalsyah_/">@tipalsyah_</a>
-      </center>
+  <canvas id="canvas"></canvas>
+
+  <div class="content">
+    <div class="image">
+      <img src="img/tipal.jpg" alt="img" class="img-profile">
     </div>
+    <h1>Selamat Datang</h1>
+    <h2><a href="#" style="text-decoration: none;">@Tipalsyah</a></h2>
+    <div class="btns">
+      <a href="mailto:you@example.com">Kontak</a>
+      <a href="javascript:void(0);" id="modeToggle">☀️ Daytime Mode</a>
+    </div>
+    <div id="sunAnimation" class="sun"></div>
   </div>
+
   <script src="scrip.js"></script>
 </body>
 
