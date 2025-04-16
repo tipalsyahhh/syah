@@ -166,13 +166,13 @@ toggleBtn.addEventListener("click", () => {
     document.body.style.background = "black";
     document.getElementById("sunAnimation").style.display = "none";
     disableVanta();
-    toggleBtn.textContent = "Mode Siang ☀️";
+    toggleBtn.textContent = "Daytime Mode ☀️";
     startFireworks && startFireworks();
   } else {
     document.body.style.background = "white";
     document.getElementById("sunAnimation").style.display = "block";
     enableVanta();
-    toggleBtn.textContent = "Mode Malam 🌙";
+    toggleBtn.textContent = "Night mode 🌙";
     stopFireworks && stopFireworks();
   }
 
